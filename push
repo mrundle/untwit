@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ $# -lt 1 ]
+  then 
+    echo "error: provide files!"
+    exit
+fi
+for var in "$@"
+do
+    scp "$var" dsg1.crc.nd.edu:/var/www/html/cse30246f14/untwit/
+done
